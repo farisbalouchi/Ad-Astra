@@ -1,10 +1,15 @@
 /* ----------------------------------------------------
-   GLOBAL STYLES
+   GLOBAL RESET + GLOBAL PAGE STYLES
 ---------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -13,7 +18,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll; /* fixed → scroll for iPhone compatibility */
+  background-attachment: scroll;
   background-color: #000;
   font-family: "Times New Roman", Times, serif;
   color: white;
@@ -21,7 +26,7 @@ body {
 
 
 /* ----------------------------------------------------
-   REUSABLE CONTAINER (You had duplicate settings)
+   REUSABLE CONTAINER
 ---------------------------------------------------- */
 .container {
   width: 80%;
@@ -34,19 +39,23 @@ body {
 
 
 /* ----------------------------------------------------
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE BREAKPOINTS (GLOBAL)
 ---------------------------------------------------- */
 
 /* Phones */
 @media (max-width: 600px) {
+  body {
+    margin: 5px;
+  }
+
   .container {
     width: 95%;
-    padding: 10px;
-    background-color: rgba(240, 128, 128, 0.2);
+    padding: 12px;
+    background-color: rgba(240, 128, 128, 0.1);
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   p, .p1 {
@@ -59,45 +68,8 @@ body {
   .container {
     width: 90%;
     padding: 15px;
-    background-color: rgba(144, 238, 144, 0.2);
+    background-color: rgba(144, 238, 144, 0.15);
   }
-}
-
-
-/* ----------------------------------------------------
-   MAIN DIV
----------------------------------------------------- */
-.main {
-  margin: 100px auto;
-  width: 90%;
-}
-
-
-/* ----------------------------------------------------
-   FOOTER
----------------------------------------------------- */
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  color: #ccc;
-  font-size: 14px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-footer a {
-  color: #bbb;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.logo {
-  display: block;
-  margin: 10px auto;
-  width: 100px;
 }
 
 
@@ -110,13 +82,14 @@ footer a:hover {
   left: 0;
   right: 0;
   height: 80px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(135deg, #d5dde704 0%, #1c4562 50%, #3ab3ff36 100%);
+  background: linear-gradient(135deg, #0c1a2a 0%, #1c4562 50%, #3ab3ff36 100%);
   backdrop-filter: blur(15px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 
   z-index: 1000;
 }
@@ -144,7 +117,7 @@ footer a:hover {
 
 .navbar a:hover {
   transform: translateY(-3px);
-  background-color: rgba(0, 0, 0, 0.18);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navbar a::after {
@@ -163,10 +136,17 @@ footer a:hover {
   left: 0;
 }
 
+/* Mobile navbar */
 @media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
   .navbar ul {
-    gap: 12px;
     flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px;
   }
 
   .navbar a {
@@ -183,20 +163,28 @@ footer a:hover {
   font-size: 20px;
   line-height: 1.6;
   text-align: justify;
-  margin-top: 20px;
+  margin: 20px auto;
+  width: 80%;
 }
 
-.h1, .titleofpage {
-  color: white;
+@media (max-width: 600px) {
+  .p1 {
+    font-size: 1rem;
+    width: 92%;
+    line-height: 1.4;
+  }
+}
+
+.titleofpage, .h1 {
   font-size: 40px;
   text-align: center;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .h2 {
   font-size: 25px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255,255,255,0.8);
 }
 
 .h3 {
@@ -208,22 +196,24 @@ footer a:hover {
 
 .whoarewe {
   font-size: 35px;
-  text-shadow: 2px 2px 2px #000;
-  margin-bottom: 15px;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  margin-top: 40px;
 }
+
 
 
 /* ----------------------------------------------------
    UNIVERSAL IMAGE OVERLAY SYSTEM
-   (Your old code repeated it 3 times)
 ---------------------------------------------------- */
-
 .image-overlay,
 .second-image-overlay,
 .third-image-overlay {
   position: relative;
   width: 100%;
-  margin: 40px auto;
+  margin: 50px 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .image-overlay img,
@@ -244,23 +234,31 @@ footer a:hover {
   color: white;
   text-align: center;
   pointer-events: none;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 3px 3px 5px black;
 }
 
-.overlay h1, .second-overlay-text h1, .third-overlay-text h1 {
+.overlay h1,
+.second-overlay-text h1,
+.third-overlay-text h1 {
   font-size: 50px;
 }
 
-.overlay h3, .second-overlay-text h3, .third-overlay-text h3 {
+.overlay h3,
+.second-overlay-text h3,
+.third-overlay-text h3 {
   font-size: 28px;
 }
 
 @media (max-width: 600px) {
-  .overlay h1, .second-overlay-text h1, .third-overlay-text h1 {
+  .overlay h1,
+  .second-overlay-text h1,
+  .third-overlay-text h1 {
     font-size: 28px;
   }
 
-  .overlay h3, .second-overlay-text h3, .third-overlay-text h3 {
+  .overlay h3,
+  .second-overlay-text h3,
+  .third-overlay-text h3 {
     font-size: 18px;
   }
 }
@@ -272,7 +270,7 @@ footer a:hover {
 .firsttext {
   font-size: 30px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .countries-list {
@@ -295,6 +293,31 @@ footer a:hover {
   transform: translateY(2px);
 }
 
+@media (max-width: 600px) {
+  .countries-list {
+    font-size: 28px;
+    padding: 15px;
+  }
+}
+
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+  color: #ccc;
+  font-size: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+footer .logo {
+  margin-top: 10px;
+  width: 100px;
+  border-radius: 10px;
+}
 
 
 
