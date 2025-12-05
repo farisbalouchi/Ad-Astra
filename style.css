@@ -12,6 +12,41 @@ body {
   background-color: #000000;
 }
 
+
+/* Default styles (for desktop) */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: lightblue;
+  text-align: center;
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+    background-color: lightcoral;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+    background-color: lightgreen;
+  }
+}
+
+
 /* Main container */
 .main {
   margin: 90px;
@@ -422,6 +457,7 @@ footer a:hover {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   color: rgba(142, 142, 142, 0.579);
 }
+
 
 
 
