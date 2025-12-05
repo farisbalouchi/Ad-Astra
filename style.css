@@ -38,14 +38,16 @@ border-radius: 10px;
 }
 
 /* ----------------------------------------------------
-PROJECTS PAGE FIXES
+FOR PROJECTS PAGE ONLY
 ---------------------------------------------------- */
+.projects-page body,
 .projects-page .container {
-background-color: transparent; /* remove gray overlay on projects page */
+background-color: transparent !important; /* removes gray overlay */
+margin-top: 0; /* remove default container margin if needed */
 }
 
-.projects-page .whymars-div {
-margin-top: 100px; /* pushes section below fixed navbar */
+.projects-page .whymars-div:first-child {
+margin-top: 100px; /* prevents first section overlapping navbar */
 }
 
 /* ----------------------------------------------------
@@ -93,11 +95,6 @@ font-size: 1.4rem;
 
 .whoarewe {
 font-size: 1.5rem;
-}
-
-/* Projects page navbar margin adjustment on phones */
-.projects-page .whymars-div {
-margin-top: 120px;
 }
 }
 
@@ -247,7 +244,7 @@ text-decoration: underline;
 }
 
 .whoarewe {
-font-size: 35px;
+font-size:35px;
 text-shadow: 2px 2px 2px black;
 text-align: center;
 margin-top: 40px;
@@ -414,6 +411,8 @@ margin-top: 10px;
 width: 100px;
 border-radius: 10px;
 }
+
+
 
 
 
