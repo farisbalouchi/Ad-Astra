@@ -13,7 +13,7 @@ body {
 }
 
 
-/* Default styles (for desktop) */
+/* Default styles (desktop) */
 .container {
   width: 80%;
   margin: auto;
@@ -22,23 +22,25 @@ body {
   text-align: center;
 }
 
-/* Small screens (phones) */
+/* Phones */
 @media (max-width: 600px) {
   .container {
     width: 95%;
     padding: 10px;
     background-color: lightcoral;
   }
+
   h1 {
     font-size: 1.5rem;
   }
+
   p {
     font-size: 1rem;
   }
 }
 
-/* Medium screens (tablets) */
-@media (max-width: 900px) {
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
   .container {
     width: 90%;
     padding: 15px;
@@ -137,6 +139,18 @@ footer a:hover {
   background-color: rgba(0, 0, 0, 0.18);
   transform: translateY(-3px); 
 }
+
+@media (max-width: 600px) {
+  .navbar ul {
+    gap: 15px;
+  }
+
+  .navbar a {
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+}
+
 
 
 /* 
@@ -457,6 +471,7 @@ footer a:hover {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   color: rgba(142, 142, 142, 0.579);
 }
+
 
 
 
