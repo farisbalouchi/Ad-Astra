@@ -15,11 +15,12 @@ overflow-x: hidden;
 
 body {
 margin: 15px;
+background-image: url("./images/photo-1713755001325-0d19ad4d271d.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: scroll;
-background-color: black;
+background-color: #000;
 font-family: "Times New Roman", Times, serif;
 color: white;
 }
@@ -34,6 +35,17 @@ padding: 20px;
 text-align: center;
 background-color: rgba(173, 216, 230, 0.2);
 border-radius: 10px;
+}
+
+/* ----------------------------------------------------
+PROJECTS PAGE FIXES
+---------------------------------------------------- */
+.projects-page .container {
+background-color: transparent; /* remove gray overlay on projects page */
+}
+
+.projects-page .whymars-div {
+margin-top: 100px; /* pushes section below fixed navbar */
 }
 
 /* ----------------------------------------------------
@@ -81,6 +93,11 @@ font-size: 1.4rem;
 
 .whoarewe {
 font-size: 1.5rem;
+}
+
+/* Projects page navbar margin adjustment on phones */
+.projects-page .whymars-div {
+margin-top: 120px;
 }
 }
 
@@ -397,6 +414,7 @@ margin-top: 10px;
 width: 100px;
 border-radius: 10px;
 }
+
 
 
 
