@@ -1,50 +1,36 @@
-name: Deploy to GitHub Pages
 
-# Trigger on push to main branch
+name: Deploy HTML/CSS Site to GitHub Pages
+
+# Trigger deployment on push to main branch
 on:
   push:
     branches:
       - main
 
+# Permissions needed for GitHub Pages deployment
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read        # Read repository contents
+  pages: write          # Allow Pages deployment
+  id-token: write       # Required by deploy-pages@v4
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the repo
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Setup Node.js (if your project uses Node)
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+      # 2. (Optional) If you had any preprocessing, you could add it here
+      # - name: Preprocess files
+      #   run: echo "No preprocessing needed for plain HTML/CSS"
 
-      # 3. Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # 4. Build the project
-      - name: Build project
-        run: npm run build
-
-      # 5. Upload build folder as artifact (optional but good for debugging)
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          path: ./build
-
-      # 6. Deploy to GitHub Pages
+      # 3. Deploy directly to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: build
+          folder: ./          # Deploy root folder containing index.html
+          commit-message: "Site updated via GitHub Actions"  # Optional custom commit message
 
 
