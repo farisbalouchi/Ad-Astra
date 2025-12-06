@@ -24,13 +24,12 @@ padding-top: 80px;
 
 .projects-page {
   background-image: none;
-  background-color: #000; /* keep it black */
-}
+  background-color: #000; 
 
 
-/* ----------------------------------------------------
+/* 
 REUSABLE CONTAINER
----------------------------------------------------- */
+ */
 .container {
 width: 80%;
 margin: 20px auto;
@@ -40,9 +39,9 @@ background-color: rgba(0, 0, 0, 0.7);
 border-radius: 10px;
 }
 
-/* ----------------------------------------------------
-RESPONSIVE BREAKPOINTS
----------------------------------------------------- */
+/* 
+RESPONSIVE BREAKPOINTS so that the website stasy on response for other devices
+*/
 @media (max-width: 600px) {
 body {
 padding-top: 70px;
@@ -96,9 +95,9 @@ padding: 15px;
 .h3 {
   margin-top: 10px;
 }
-/* ----------------------------------------------------
-NAVBAR
----------------------------------------------------- */
+/* 
+NAVBAR that applies to all pages
+ */
 .navbar {
 position: fixed;
 top: 0;
@@ -160,9 +159,9 @@ left: 0;
 .navbar a { padding: 10px 14px; font-size: 16px; }
 }
 
-/* ----------------------------------------------------
+/* 
 TEXT STYLES
----------------------------------------------------- */
+ */
 .p1 {
 font-size: 20px;
 line-height: 1.6;
@@ -177,6 +176,7 @@ width: 80%;
   color: white;
 }
 
+/*Here I am making the text scale up nicely for other devices  */
 @media (max-width: 600px) {
 .p1 { font-size: 1rem; width: 92%; line-height: 1.4; }
 }
@@ -186,9 +186,9 @@ width: 80%;
 .h3 { font-size: 32px; text-align: center; text-shadow: 2px 2px 2px rgb(65, 63, 63); text-decoration: underline; }
 .whoarewe { font-size: 35px; text-shadow: 2px 2px 2px black; text-align: center; margin-top: 40px; }
 
-/* ----------------------------------------------------
-UNIVERSAL IMAGE OVERLAY SYSTEM
----------------------------------------------------- */
+/* 
+UNIVERSAL IMAGE OVERLAY SYSTEM so I can write on the images
+ */
 .image-overlay, .second-image-overlay, .third-image-overlay {
 position: relative;
 width: 100%;
@@ -224,9 +224,9 @@ text-shadow: 3px 3px 5px black;
 .overlay h3, .second-overlay-text h3, .third-overlay-text h3 { font-size: 18px; }
 }
 
-/* ----------------------------------------------------
-PROJECT PAGE IMAGES
----------------------------------------------------- */
+/* 
+PROJECT PAGE IMAGES from the project.html file
+ */
 .whymars-div, .mars-colony-div, .terraforming-div { display: block; width: 100%; margin: 20px auto; text-align: center; }
 .whymars-image, .mars-colony, .terraforming { width: 100%; max-width: 900px; height: auto; margin: 15px auto; display: block; border-radius: 10px; }
 
@@ -238,9 +238,9 @@ PROJECT PAGE IMAGES
 .marscolony-text, .whymars-explanation { font-size: 1rem; width: 95%; line-height: 1.4; }
 }
 
-/* ----------------------------------------------------
-COUNTRY LIST PAGE
----------------------------------------------------- */
+/* 
+COUNTRY LIST PAGE from the countries.html file
+*/
 .firsttext { font-size: 30px; text-align: center; margin-top: 25px; }
 .countries-list { font-size: 40px; text-align: center; line-height: 2; background-color: rgba(49, 130, 223, 0.1); padding: 30px; border-radius: 10px; }
 .countries-list a { color: white; text-decoration: none; transition: 0.2s; }
@@ -258,11 +258,12 @@ COUNTRY LIST PAGE
 }
 
 
-/* ----------------------------------------------------
+/* 
 FOOTER
----------------------------------------------------- */
+ */
 footer { text-align: center; padding: 25px; margin-top: 50px; color: #ccc; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.2); }
 footer .logo { margin-top: 10px; width: 100px; border-radius: 10px; }
+
 
 
 
