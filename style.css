@@ -170,11 +170,6 @@ margin: 20px auto;
 width: 80%;
 }
 
-.title-ad-astra{
-  margin-bottom: 20px;
-  font-style: bold;
-  color: white;
-}
 
 /*Here I am making the text scale up nicely for other devices  */
 @media (max-width: 600px) {
@@ -263,6 +258,7 @@ FOOTER
  */
 footer { text-align: center; padding: 25px; margin-top: 50px; color: #ccc; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.2); }
 footer .logo { margin-top: 10px; width: 100px; border-radius: 10px; }
+
 
 
 
