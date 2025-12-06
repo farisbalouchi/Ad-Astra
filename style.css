@@ -36,7 +36,7 @@ width: 80%;
 margin: 20px auto;
 padding: 20px;
 text-align: center;
-background-color: rgba(0, 0, 0, 0.7); /* Same dark semi-transparent as index */
+background-color: rgba(0, 0, 0, 0.7); 
 border-radius: 10px;
 }
 
@@ -257,6 +257,7 @@ FOOTER
 ---------------------------------------------------- */
 footer { text-align: center; padding: 25px; margin-top: 50px; color: #ccc; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.2); }
 footer .logo { margin-top: 10px; width: 100px; border-radius: 10px; }
+
 
 
 
