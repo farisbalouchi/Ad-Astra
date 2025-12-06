@@ -1,263 +1,218 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
 html, body {
-width: 100%;
-overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-margin: 0;
-font-family: "Times New Roman", Times, serif;
-color: white;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: scroll;
-background-color: black;
-padding-top: 80px;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: black;
+  padding-top: 80px;
 }
 
 .projects-page {
   background-image: none;
-  background-color: #000; 
-
+  background-color: #000;
 }
-/* 
-REUSABLE CONTAINER
- */
+
+/* REUSABLE CONTAINER */
 .container {
-width: 80%;
-margin: 20px auto;
-padding: 20px;
-text-align: center;
-background-color: rgba(0, 0, 0, 0.7); 
-border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
-/* 
-RESPONSIVE BREAKPOINTS so that the website stasy on response for other devices
-*/
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 600px) {
-body {
-padding-top: 70px;
+  body {
+    padding-top: 70px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 12px;
+  }
+
+  h1, .titleofpage, .h1 {
+    font-size: 1.7rem;
+  }
+
+  p, .p1, .marscolony-text, .whymars-explanation {
+    font-size: 1rem;
+  }
+
+  .whymars-text {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+
+  .mars-colony, .whymars-image, .terraforming {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+  }
+
+  .h2 { font-size: 1.2rem; }
+  .h3 { font-size: 1.4rem; }
+  .whoarewe { font-size: 1.5rem; }
+
+  .p1 { font-size: 1rem; width: 92%; line-height: 1.4; }
+
+  .overlay h1, .second-overlay-text h1, .third-overlay-text h1 { font-size: 28px; }
+  .overlay h3, .second-overlay-text h3, .third-overlay-text h3 { font-size: 18px; }
+
+  .whymars-text { font-size: 2rem; }
+  .marscolony-text, .whymars-explanation { font-size: 1rem; width: 95%; line-height: 1.4; }
+
+  .countries-list { font-size: 28px; padding: 15px; }
 }
 
-.container {
-width: 95%;
-padding: 12px;
-}
-
-h1, .titleofpage, .h1 {
-font-size: 1.7rem;
-}
-
-p, .p1, .marscolony-text, .whymars-explanation {
-font-size: 1rem;
-}
-
-.whymars-text {
-font-size: 2rem;
-margin: 10px 0;
-}
-
-.mars-colony, .whymars-image, .terraforming {
-width: 100%;
-height: auto;
-margin: 15px 0;
-}
-
-.h2 { font-size: 1.2rem; }
-.h3 { font-size: 1.4rem; }
-.whoarewe { font-size: 1.5rem; }
-}
-
+/* Medium screens */
 @media (min-width: 601px) and (max-width: 900px) {
-.container {
-width: 90%;
-padding: 15px;
+  .container { width: 90%; padding: 15px; }
+
+  .whymars-text { font-size: 3rem; }
+  .h2 { font-size: 1.5rem; }
+  .h3 { font-size: 1.8rem; }
+  .whoarewe { font-size: 2rem; }
 }
 
-.whymars-text { font-size: 3rem; }
-.h2 { font-size: 1.5rem; }
-.h3 { font-size: 1.8rem; }
-.whoarewe { font-size: 2rem; }
-}
+/* HEADINGS */
+.h2 { font-size: 25px; text-align: center; color: rgba(255,255,255,0.8); margin-top: 10px; }
+.h3 { font-size: 32px; text-align: center; text-shadow: 2px 2px 2px rgb(65, 63, 63); text-decoration: underline; margin-top: 10px; }
+.titleofpage, .h1 { font-size: 40px; text-align: center; margin: 25px 0; }
+.whoarewe { font-size: 35px; text-shadow: 2px 2px 2px black; text-align: center; margin-top: 40px; }
 
-.h2{
-  margin-top: 10px;
-}
-
-.h3 {
-  margin-top: 10px;
-}
-/* 
-NAVBAR that applies to all pages
- */
+/* NAVBAR */
 .navbar {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-height: 80px;
-display: flex;
-justify-content: center;
-align-items: center;
-background: linear-gradient(135deg, #0c1a2a 0%, #1c4562 50%, #3ab3ff36 100%);
-backdrop-filter: blur(15px);
-box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0c1a2a 0%, #1c4562 50%, #3ab3ff36 100%);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  z-index: 1000;
 }
 
 .navbar ul {
-list-style: none;
-display: flex;
-gap: 40px;
+  list-style: none;
+  display: flex;
+  gap: 40px;
 }
 
 .navbar a {
-color: rgb(220, 221, 232);
-text-decoration: none;
-font-family: 'Segoe UI', 'Roboto', sans-serif;
-font-weight: 600;
-font-size: 20px;
-padding: 14px 22px;
-border-radius: 10px;
-letter-spacing: 0.5px;
-position: relative;
-transition: 0.3s;
+  color: rgb(220, 221, 232);
+  text-decoration: none;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.3s;
 }
 
 .navbar a:hover {
-transform: translateY(-3px);
-background-color: rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navbar a::after {
-content: "";
-position: absolute;
-width: 0;
-left: 50%;
-bottom: 6px;
-height: 3px;
-background-color: #3ab3ff;
-transition: 0.3s;
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 50%;
+  bottom: 6px;
+  height: 3px;
+  background-color: #3ab3ff;
+  transition: 0.3s;
 }
 
 .navbar a:hover::after {
-width: 100%;
-left: 0;
+  width: 100%;
+  left: 0;
 }
 
 @media (max-width: 600px) {
-.navbar { height: auto; padding: 10px 0; }
-.navbar ul { flex-wrap: wrap; gap: 10px; padding: 5px; }
-.navbar a { padding: 10px 14px; font-size: 16px; }
+  .navbar { height: auto; padding: 10px 0; }
+  .navbar ul { flex-wrap: wrap; gap: 10px; padding: 5px; }
+  .navbar a { padding: 10px 14px; font-size: 16px; }
 }
 
-/* 
-TEXT STYLES
- */
-.p1 {
-font-size: 20px;
-line-height: 1.6;
-text-align: justify;
-margin: 20px auto;
-width: 80%;
-}
-
-
-/*Here I am making the text scale up nicely for other devices  */
-@media (max-width: 600px) {
-.p1 { font-size: 1rem; width: 92%; line-height: 1.4; }
-}
-
-.titleofpage, .h1 { font-size: 40px; text-align: center; margin: 25px 0; }
-.h2 { font-size: 25px; text-align: center; color: rgba(255,255,255,0.8); }
-.h3 { font-size: 32px; text-align: center; text-shadow: 2px 2px 2px rgb(65, 63, 63); text-decoration: underline; }
-.whoarewe { font-size: 35px; text-shadow: 2px 2px 2px black; text-align: center; margin-top: 40px; }
-
-/* 
-UNIVERSAL IMAGE OVERLAY SYSTEM so I can write on the images
- */
+/* IMAGE OVERLAYS */
 .image-overlay, .second-image-overlay, .third-image-overlay {
-position: relative;
-width: 100%;
-margin: 50px 0;
-border-radius: 10px;
-overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 50px 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .image-overlay img, .second-image-overlay img, .third-image-overlay img {
-width: 100%;
-max-width: 100%;
-height: auto;
-border-radius: 10px;
-display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 .overlay, .second-overlay-text, .third-overlay-text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-text-align: center;
-pointer-events: none;
-text-shadow: 3px 3px 5px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 3px 3px 5px black;
 }
 
 .overlay h1, .second-overlay-text h1, .third-overlay-text h1 { font-size: 50px; }
 .overlay h3, .second-overlay-text h3, .third-overlay-text h3 { font-size: 28px; }
 
-@media (max-width: 600px) {
-.overlay h1, .second-overlay-text h1, .third-overlay-text h1 { font-size: 28px; }
-.overlay h3, .second-overlay-text h3, .third-overlay-text h3 { font-size: 18px; }
-}
-
-/* 
-PROJECT PAGE IMAGES from the project.html file
- */
+/* PROJECT PAGE IMAGES */
 .whymars-div, .mars-colony-div, .terraforming-div { display: block; width: 100%; margin: 20px auto; text-align: center; }
 .whymars-image, .mars-colony, .terraforming { width: 100%; max-width: 900px; height: auto; margin: 15px auto; display: block; border-radius: 10px; }
 
 .whymars-text { font-size: 4rem; color: white; margin: 20px 0; }
 .marscolony-text, .whymars-explanation { font-size: 1.2rem; line-height: 1.6; margin: 15px auto; width: 90%; text-align: justify; }
 
-@media (max-width: 600px) {
-.whymars-text { font-size: 2rem; }
-.marscolony-text, .whymars-explanation { font-size: 1rem; width: 95%; line-height: 1.4; }
-}
-
-/* 
-COUNTRY LIST PAGE from the countries.html file
-*/
+/* COUNTRY LIST PAGE */
 .firsttext { font-size: 30px; text-align: center; margin-top: 25px; }
 .countries-list { font-size: 40px; text-align: center; line-height: 2; background-color: rgba(49, 130, 223, 0.1); padding: 30px; border-radius: 10px; }
 .countries-list a { color: white; text-decoration: none; transition: 0.2s; }
 .countries-list a:hover { color: gray; transform: translateY(2px); }
-@media (max-width: 600px) { .countries-list { font-size: 28px; padding: 15px; } }
+.countries-list { list-style: none; padding-left: 0; margin-left: 0; }
+.countries-list *::before { content: none; }
 
-.countries-list {
-  list-style: none; 
-  padding-left: 0;  
-  margin-left: 0;   
-}
-
-.countries-list *::before {
-  content: none; 
-}
-
-
-/* 
-FOOTER
- */
+/* FOOTER */
 footer { text-align: center; padding: 25px; margin-top: 50px; color: #ccc; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.2); }
 footer .logo { margin-top: 10px; width: 100px; border-radius: 10px; }
+
+/* TEXT STYLES */
+.p1 { font-size: 20px; line-height: 1.6; text-align: justify; margin: 20px auto; width: 80%; }
+
+
 
 
 
