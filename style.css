@@ -19,7 +19,6 @@ background-position: center;
 background-repeat: no-repeat;
 background-attachment: scroll;
 background-color: black;
-/* Add space so first container does not go behind navbar */
 padding-top: 80px;
 }
 
@@ -242,11 +241,23 @@ COUNTRY LIST PAGE
 .countries-list a:hover { color: gray; transform: translateY(2px); }
 @media (max-width: 600px) { .countries-list { font-size: 28px; padding: 15px; } }
 
+.countries-list {
+  list-style: none; 
+  padding-left: 0;  
+  margin-left: 0;   
+}
+
+.countries-list *::before {
+  content: none; 
+}
+
+
 /* ----------------------------------------------------
 FOOTER
 ---------------------------------------------------- */
 footer { text-align: center; padding: 25px; margin-top: 50px; color: #ccc; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.2); }
 footer .logo { margin-top: 10px; width: 100px; border-radius: 10px; }
+
 
 
 
