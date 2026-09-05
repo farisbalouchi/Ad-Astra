@@ -1,5 +1,5 @@
 # Ad-Astra
-A website for a fictional global space exploration organization meant as a practice front-end project. *NO AI TOOLS WERE USED, only Stackoverflow for debugging*
+A website for a fictional global space exploration organization meant as a practice front-end project. *NO AI TOOLS WERE USED, only Stackoverflow for debugging and help in certain areas*
 ## What I learned
 I learned how to write headers on top of images (overlaying) which is very simple but took me some fun trial and error to learn 
 I learned how to put different lines of code for different sections in their own respective files and how to link them.
