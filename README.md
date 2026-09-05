@@ -6,7 +6,7 @@ I learned how to put different lines of code for different sections in their own
 I learned more about how important code readability is and how important it is to be able to debug your own code when needed.
 ## What could be changed/Improved
 The pictures could be scaled to fit the website better.
-The website's ability to scale into any display could be improved.
+I really need to learn how to make the website responsive on other devices better.
 The readability could be improved
 Efficiency could be improved with better knowledge of CSS and Flexbox which I need to work on
 
